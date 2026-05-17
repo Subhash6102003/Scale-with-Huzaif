@@ -269,12 +269,12 @@ const App = () => {
             {screenshotImages.map((src, idx) => (
               <div
                 key={idx}
-                className="aspect-[9/16] rounded-xl md:rounded-[2rem] overflow-hidden border-[4px] border-white/10 bg-black shadow-2xl hover:border-[#0096ff]/50 hover:-translate-y-2 transition-all duration-300 relative group"
+                className="flex items-center justify-center aspect-[9/16] rounded-xl md:rounded-[2rem] overflow-hidden border-[4px] border-white/10 bg-black shadow-2xl hover:border-[#0096ff]/50 hover:-translate-y-2 transition-all duration-300 relative group"
               >
                 <img
                   src={src}
                   alt={`Client Result Screenshot ${idx + 1}`}
-                  className="w-full h-full object-cover object-top opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                  className="w-full h-full object-contain opacity-90 group-hover:opacity-100 transition-opacity duration-500"
                   onError={(e) => {
                     e.target.src = 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=400&auto=format&fit=crop';
                   }}
